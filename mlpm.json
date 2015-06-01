@@ -3,5 +3,5 @@
   "version": "1.0.1",
   "description": "Use cookies with the REST API",
   "repository": "https://github.com/ryan321/rest-cookies.git",
-  "files": [ "deploy", "rest-cookie-auth"]
+  "files": [ "deploy"]
 }
