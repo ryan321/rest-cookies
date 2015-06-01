@@ -9,7 +9,7 @@ import module namespace conf = "http://marklogic.com/rest-api/endpoints/config"
     at "/MarkLogic/rest-api/endpoints/config.xqy";
 
 import module namespace sessions = "rest-cookies/sessions"
-    at "/sessions.xqy";
+    at "/mlpm_modules/rest-cookies/sessions.xqy";
 
 declare default function namespace "http://www.w3.org/2005/xpath-functions";
 declare option xdmp:mapping "false";
