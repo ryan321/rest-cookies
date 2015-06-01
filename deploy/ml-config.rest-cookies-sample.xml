@@ -560,21 +560,21 @@
     <amp>
       <namespace>http://marklogic.com/sessions</namespace>
       <local-name>login-if-ml-session</local-name>
-      <doc-uri>/sessions.xqy</doc-uri>
+      <doc-uri>/mlpm_modules/rest-cookies/rest-cookie-auth/sessions.xqy</doc-uri>
       <db-name>@ml.app-modules-db</db-name>
       <role-name>@ml.session-amp-role</role-name>
     </amp>
     <amp>
       <namespace>http://marklogic.com/sessions</namespace>
       <local-name>logout</local-name>
-      <doc-uri>/sessions.xqy</doc-uri>
+      <doc-uri>/mlpm_modules/rest-cookies/rest-cookie-auth/sessions.xqy</doc-uri>
       <db-name>@ml.app-modules-db</db-name>
       <role-name>@ml.session-amp-role</role-name>
     </amp>
     <amp>
       <namespace>http://marklogic.com/sessions</namespace>
       <local-name>create-session</local-name>
-      <doc-uri>/sessions.xqy</doc-uri>
+      <doc-uri>/mlpm_modules/rest-cookies/rest-cookie-auth/sessions.xqy</doc-uri>
       <db-name>@ml.app-modules-db</db-name>
       <role-name>@ml.session-amp-role</role-name>
     </amp>
