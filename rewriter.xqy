@@ -16,7 +16,7 @@ declare option xdmp:mapping "false";
 
 let $uri  := xdmp:get-request-url()
 return (
-    if (xdmp:get-request-path() = ("/rest-cookie-auth/login.xqy", "/rest-cookie-auth/logout.xqy"))
+    if (xdmp:get-request-path() = ("/mlpm_modules/rest-cookies/login.xqy", "/mlpm_modules/rest-cookies/logout.xqy"))
     then $uri
     else
         let $_ := sessions:login-if-ml-session()

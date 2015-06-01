@@ -1,7 +1,7 @@
 module namespace sessions = "rest-cookies/sessions";
 
 import module namespace cookies = "http://parthcomp.com/cookies"
-    at "/cookies.xqy";
+    at "/mlpm_modules/rest-cookies/cookies.xqy";
 import module namespace config = "roxy/config"
     at "/app/config/config.xqy";
 
