@@ -1,4 +1,4 @@
-module namespace sessions = "http://marklogic.com/sessions";
+module namespace sessions = "rest-cookies/sessions";
 
 import module namespace cookies = "http://parthcomp.com/cookies"
     at "/cookies.xqy";
