@@ -1,4 +1,4 @@
-import module namespace sessions = "http://marklogic.com/sessions" at "/sessions.xqy";
+import module namespace sessions = "rest-cookies/sessions" at "/sessions.xqy";
 
 let $username := xdmp:get-request-field("username")
 let $password := xdmp:get-request-field("password")
