@@ -2,13 +2,13 @@
 Use cookies with MarkLogic REST API. 
 
 ## Why?
-The MarkLogic REST API uses Basic Authentication. This can be a problem for middleware servers that maintain a session with the end user because the username and password for the user must be saved in a middleare session in order to use Basic Authentication with the MarkLogic REST API. If middleware sessions are persisted to the filesystem or in a database, then your users' passwords are saved in clear text. So rather than using Basic Auth that is sent with each request from middleware to the MarkLogic REST API, a MarkLogic server session can be created and a cookie returned that the middleware server can use instead of saving the username and password. Then this MarkLogic session ID can be persisted in the middleware session and no passwords are saved in clear text anywhere.
+The MarkLogic REST API uses Basic Authentication. This can be a problem for middleware servers that maintain a session with the end user because the username and password for the user must be saved in a middleware session in order to use Basic Authentication with the MarkLogic REST API. If middleware sessions are persisted to the filesystem or in a database, then your users' passwords are saved in clear text. So rather than using Basic Auth that is sent with each request from middleware to the MarkLogic REST API, a MarkLogic server session can be created and a cookie returned that the middleware server can use instead of saving the username and password. Then this MarkLogic session ID can be persisted in the middleware session and no passwords are saved in clear text anywhere.
 
 ## How does it work?
 - A custom login module (page) logs a user in
 - A custom logout module (page) logs a user out
 - A custom rewriter routes requests to the custom login and logout modules, and routes all other requests to the REST API but it first calls custom code to check for a custom cookie and attempts to log the user in using the cookie session ID
-- Custom session code adds a cookie to the response after successful log in and writes a session xml doc in a configurable session databas.
+- Custom session code adds a cookie to the response after successful log in and writes a session xml doc to a configurable session database.
 - When a request comes in and the custom session cookie is found, the session code looks up the corresponding session for the cookie and if a session xml doc is found and is still valid, then xdmp:login in called and the resulting REST API invocation happens under the logged in user
 
 ## Why use a custom session database?
