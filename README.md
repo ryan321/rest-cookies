@@ -144,7 +144,7 @@ declare variable $SESSION-AMP-ROLE := "@ml.session-amp-role";
 ## Usage
 The [ml-proxy](https://github.com/ryan321/ml-proxy) project uses rest-cookies so you can use that or refer to that for a full implementation.
 
-- First, log in by calling `/mlpm_modules/rest-cookies/login.xqy`and pass the username and password as paramters
+- First, log in by calling `/mlpm_modules/rest-cookies/login.xqy`and pass the username and password as parameters
 - Check for a returned cookie with the name `mlSessionId` and save it to send back with each request
-- Send that cookie back with each request to automatically log in
+- Send that cookie back with each request to the REST API to automatically log in (make sure the custom rewriter is being used for your application)
 - log out by calling `/mlpm_modules/rest-cookies/logout.xqy`
